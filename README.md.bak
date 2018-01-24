@@ -1,3 +1,6 @@
+# Origin repository
+https://github.com/singram/mongo-docker-compose
+
 # mongo-docker-compose
 This repository provides a fully sharded mongo environment using docker-compose and local storage.
 
