@@ -1,0 +1,33 @@
+version: "2"
+services:
+
+  mongors1n1:
+    container_name: mongors1n1
+    image: mongo:3.0.14
+    command: mongod --noprealloc --smallfiles --replSet mongors1 --dbpath /data/db --nojournal --oplogSize 16 --noauth
+    environment:
+      TERM: xterm
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/vol/mongo-cluster/mongors1n1:/data/db
+
+  mongors1n2:
+    container_name: mongors1n2
+    image: mongo:3.0.14
+    command: mongod --noprealloc --smallfiles --replSet mongors1 --dbpath /data/db --nojournal --oplogSize 16 --noauth
+    environment:
+      TERM: xterm
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/vol/mongo-cluster/mongors1n2:/data/db
+
+  mongors1n3:
+    container_name: mongors1n3
+    image: mongo:3.0.14
+    command: mongod --noprealloc --smallfiles --replSet mongors1 --dbpath /data/db --nojournal --oplogSize 16 --noauth
+    environment:
+      TERM: xterm
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/vol/mongo-cluster/mongors1n3:/data/db
+
